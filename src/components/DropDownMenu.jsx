@@ -1,9 +1,18 @@
-export function DropDownMenu({ children }) {
+import { useState } from "react";
+
+export function DropDownMenu({ children, title }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleOpen() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <>
       <div className="dropdown">
-        <button>DROP</button>
-        <div className="menu-content">{children}</div>
+        <h1>{title}</h1>
+        <button onClick={toggleOpen}>DROP</button>
+        <div className={`menu-content ${isOpen ? "open" : ""}`}>{children}</div>
       </div>
     </>
   );

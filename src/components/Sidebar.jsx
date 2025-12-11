@@ -1,16 +1,15 @@
 import { DropDownMenu } from "./DropDownMenu";
 import { GeneralForm } from "../features/forms/GeneralForm";
 
-export function Sidebar({ name, nameFn }) {
+export function Sidebar({ info, setInfo }) {
   return (
     <>
       <section className="sidebar">
-        <DropDownMenu>
-          <GeneralForm name={name} nameFn={nameFn} />
+        <DropDownMenu title="General Information">
+          <GeneralForm info={info} setInfo={setInfo} />
         </DropDownMenu>
-        <DropDownMenu />
-        <DropDownMenu />
-        <h1>{name}</h1>
+        <DropDownMenu title="Education Experience" />
+        <DropDownMenu title="Professional Experience" />
       </section>
     </>
   );

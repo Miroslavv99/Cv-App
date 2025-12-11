@@ -1,19 +1,34 @@
 import { useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { CvPreview } from "./cv-sections/CvPreview";
+import { GeneralSection } from "./cv-sections/GeneralSection";
 
 export function MainSection() {
-  const [name, setName] = useState("");
+  const [generalInfo, setInfo] = useState({
+    name: "",
+    email: "",
+    number: "",
+    city: "",
+  });
 
-  function handleName(e) {
-    setName(e.target.value);
+  function handleInfo(e) {
+    const input = e.target.id;
+    switch (input) {
+      case "name":
+        setInfo((prev) => ({ ...prev, name: e.target.value }));
+        break;
+      case "email":
+        setInfo((prev) => ({ ...prev, email: e.target.value }));
+    }
   }
 
   return (
     <>
       <main>
-        <Sidebar name={name} nameFn={handleName} />
-        <CvPreview />
+        <Sidebar info={generalInfo} setInfo={handleInfo} />
+        <CvPreview>
+          <GeneralSection name={generalInfo.name} />
+        </CvPreview>
       </main>
     </>
   );

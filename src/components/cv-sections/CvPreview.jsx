@@ -1,7 +1,7 @@
-export function CvPreview() {
+export function CvPreview({ children }) {
   return (
     <>
-      <section className="cv-preview"></section>
+      <div className="cv-preview">{children}</div>
     </>
   );
 }

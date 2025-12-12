@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Icon } from "./icons/ Icon";
 
-export function DropDownMenu({ children, title }) {
+export function DropDownMenu({ children, title, image }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleOpen() {
@@ -10,8 +11,18 @@ export function DropDownMenu({ children, title }) {
   return (
     <>
       <div className="dropdown">
-        <h1>{title}</h1>
-        <button onClick={toggleOpen}>DROP</button>
+        <div className="menu-header">
+          <div className="menu-title">
+            <Icon name={image} />
+            <h1>{title}</h1>
+          </div>
+          <button
+            className={`drop-button ${isOpen ? "button-open" : ""}`}
+            onClick={toggleOpen}
+          >
+            {<Icon name={"chevron"} />}
+          </button>
+        </div>
         <div className={`menu-content ${isOpen ? "open" : ""}`}>{children}</div>
       </div>
     </>

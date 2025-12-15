@@ -2,24 +2,26 @@ export function GeneralForm({ info, setInfo }) {
   return (
     <>
       <form>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Full Name</label>
         <input
+          onChange={setInfo}
           type="text"
           id="name"
           name="name"
-          value={info.name}
-          onChange={setInfo}
           placeholder="Name"
         />
         <label htmlFor="email">Email</label>
         <input
+          onChange={setInfo}
           type="email"
           id="email"
           name="email"
-          value={info.email}
-          onChange={setInfo}
           placeholder="Email"
         />
+        <label htmlFor="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone" />
+        <label htmlFor="city">City</label>
+        <input type="text" id="city" name="city" placeholder="City" />
       </form>
     </>
   );

@@ -1,7 +1,8 @@
-export function GeneralSection({ name }) {
+export function GeneralSection({ name, email }) {
   return (
     <>
       <h1>{name}</h1>
+      <h2>{email}</h2>
     </>
   );
 }

@@ -23,7 +23,12 @@ export function DropDownMenu({ children, title, image }) {
             {<Icon name={"chevron"} />}
           </button>
         </div>
-        <div className={`menu-content ${isOpen ? "open" : ""}`}>{children}</div>
+        <div className={`menu-content ${isOpen ? "open" : ""}`}>
+          {children}
+          <button className="save" onClick={toggleOpen}>
+            Save
+          </button>
+        </div>
       </div>
     </>
   );

@@ -7,7 +7,7 @@ export function MainSection() {
   const [generalInfo, setInfo] = useState({
     name: "",
     email: "",
-    number: "",
+    phone: "",
     city: "",
   });
 
@@ -19,6 +19,13 @@ export function MainSection() {
         break;
       case "email":
         setInfo((prev) => ({ ...prev, email: e.target.value }));
+        break;
+      case "phone":
+        setInfo((prev) => ({ ...prev, number: e.target.value }));
+        break;
+      case "city":
+        setInfo((prev) => ({ ...prev, city: e.target.value }));
+        break;
     }
   }
 
@@ -27,7 +34,7 @@ export function MainSection() {
       <main>
         <Sidebar info={generalInfo} setInfo={handleInfo} />
         <CvPreview>
-          <GeneralSection name={generalInfo.name} />
+          <GeneralSection name={generalInfo.name} email={generalInfo.email} />
         </CvPreview>
       </main>
     </>

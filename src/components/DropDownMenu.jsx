@@ -11,7 +11,7 @@ export function DropDownMenu({ children, title, image }) {
   return (
     <>
       <div className="dropdown">
-        <div className="menu-header">
+        <div onClick={toggleOpen} className="menu-header">
           <div className="menu-title">
             <Icon name={image} />
             <h1>{title}</h1>
@@ -26,9 +26,15 @@ export function DropDownMenu({ children, title, image }) {
         <div className={`menu-content ${isOpen ? "open" : ""}`}>
           {children}
           <button className="save" onClick={toggleOpen}>
-            Save
+            ✔ Save
           </button>
         </div>
+        <button
+          className={`edit ${isOpen ? "" : "visible"}`}
+          onClick={toggleOpen}
+        >
+          Edit
+        </button>
       </div>
     </>
   );

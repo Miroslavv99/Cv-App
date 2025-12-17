@@ -11,28 +11,46 @@ export function MainSection() {
     city: "",
   });
 
-  function handleInfo(e) {
-    const input = e.target.id;
-    switch (input) {
-      case "name":
-        setInfo((prev) => ({ ...prev, name: e.target.value }));
-        break;
-      case "email":
-        setInfo((prev) => ({ ...prev, email: e.target.value }));
-        break;
-      case "phone":
-        setInfo((prev) => ({ ...prev, number: e.target.value }));
-        break;
-      case "city":
-        setInfo((prev) => ({ ...prev, city: e.target.value }));
-        break;
+  const [isOpen, setIsOpen] = useState({
+    general: false,
+    education: false,
+    professional: false,
+    skills: false,
+  });
+
+  function toggleOpen(key) {
+    switch (key) {
+      case "general":
+        setIsOpen((prev) => ({ ...prev, general: !prev.general }));
     }
+  }
+
+  function handleInfo(e) {
+    e.preventDefault();
+
+    setInfo((prev) => ({
+      ...prev,
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      city: e.target.city.value,
+    }));
+  }
+
+  function submitHandler(e) {
+    handleInfo(e);
+    toggleOpen("general");
   }
 
   return (
     <>
       <main>
-        <Sidebar info={generalInfo} setInfo={handleInfo} />
+        <Sidebar
+          info={generalInfo}
+          isOpen={isOpen}
+          setIsOpen={toggleOpen}
+          submitHandler={submitHandler}
+        />
         <CvPreview>
           <GeneralSection name={generalInfo.name} email={generalInfo.email} />
         </CvPreview>

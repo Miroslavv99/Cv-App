@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: linear-gradient(0deg, #ff00aa, #ff8e5a);
+  background: linear-gradient(0deg, #ff00aa, #ffa479);
   width: 100%;
   min-height: 25vh;
   color: aliceblue;
@@ -147,7 +147,7 @@ input:focus {
 }
 
 .edit {
-  visibility: hidden;
+  display: none;
   background: rgb(236, 236, 236);
   color: rgb(72, 72, 72);
   font-weight: 600;
@@ -156,6 +156,7 @@ input:focus {
   cursor: pointer;
   width: 100px;
   height: 40px;
+  margin-right: calc(5% + 13px);
   border-radius: 20px;
   align-self: flex-end;
 }
@@ -165,7 +166,7 @@ input:focus {
 }
 
 .visible {
-  visibility: visible;
+  display: block;
 }
 
 .cv-preview {

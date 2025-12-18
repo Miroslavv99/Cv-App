@@ -1,7 +1,7 @@
 export function GeneralForm({ submit }) {
   return (
     <>
-      <form onSubmit={submit}>
+      <form onSubmit={(e) => submit(e, "general")}>
         <label htmlFor="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Name" required />
         <label htmlFor="email">Email</label>

@@ -1,6 +1,15 @@
 import { Icon } from "./icons/ Icon";
 
-export function Accordion({ children, title, image, isOpen, setIsOpen }) {
+export function Accordion({
+  children,
+  title,
+  image,
+  formIsOpen,
+  buttonVisible,
+  setIsOpen,
+  openKey,
+}) {
+  console.log({ buttonVisible, formIsOpen });
   return (
     <>
       <div className="accordion">
@@ -10,21 +19,21 @@ export function Accordion({ children, title, image, isOpen, setIsOpen }) {
             <h1>{title}</h1>
           </div>
           <button
-            className={`drop-button ${isOpen ? "button-open" : ""}`}
+            className={`drop-button ${formIsOpen ? "button-open" : ""}`}
             onClick={() => {
-              setIsOpen("general");
+              setIsOpen(openKey);
             }}
           >
             {<Icon name={"chevron"} />}
           </button>
         </div>
-        <div className={`accordion-content ${isOpen ? "open" : ""}`}>
+        <div className={`accordion-content ${formIsOpen ? "open" : ""}`}>
           {children}
         </div>
         <button
-          className={`edit ${isOpen ? "" : "visible"}`}
+          className={`edit ${buttonVisible && !formIsOpen ? "visible" : ""}`}
           onClick={() => {
-            setIsOpen("general");
+            setIsOpen(openKey);
           }}
         >
           Edit

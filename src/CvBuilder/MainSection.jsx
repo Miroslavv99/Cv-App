@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Sidebar } from "./Sidebar";
+import { FormSection } from "./FormSection";
 import { CvPreview } from "./cv-sections/CvPreview";
 import { GeneralSection } from "./cv-sections/GeneralSection";
 
 export function MainSection() {
-  const [generalInfo, setInfo] = useState({
+  const [generalInfo, setGeneralInfo] = useState({
     name: "",
     email: "",
     phone: "",
@@ -18,6 +18,8 @@ export function MainSection() {
     skills: false,
   });
 
+  const [editButtonVisibility, setVisibility] = useState(false);
+
   function toggleOpen(key) {
     switch (key) {
       case "general":
@@ -25,10 +27,10 @@ export function MainSection() {
     }
   }
 
-  function handleInfo(e) {
+  function handleGeneralInfo(e) {
     e.preventDefault();
 
-    setInfo((prev) => ({
+    setGeneralInfo((prev) => ({
       ...prev,
       name: e.target.name.value,
       email: e.target.email.value,
@@ -38,16 +40,16 @@ export function MainSection() {
   }
 
   function submitHandler(e) {
-    handleInfo(e);
+    handleGeneralInfo(e);
     toggleOpen("general");
   }
 
   return (
     <>
       <main>
-        <Sidebar
-          info={generalInfo}
+        <FormSection
           isOpen={isOpen}
+          editButtonVisibility={editButtonVisibility}
           setIsOpen={toggleOpen}
           submitHandler={submitHandler}
         />

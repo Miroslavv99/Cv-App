@@ -6,8 +6,8 @@ export function Icon({ name }) {
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#ff00aa" />
-                <stop offset="100%" stop-color="#ff6a64" />
+                <stop offset="0%" stopColor="#ff00aa" />
+                <stop offset="100%" stopColor="#ff6a64" />
               </linearGradient>
             </defs>
 
@@ -24,8 +24,8 @@ export function Icon({ name }) {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <defs>
               <linearGradient id="grad2" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#ff00aa" />
-                <stop offset="100%" stop-color="#ff6a64" />
+                <stop offset="0%" stopColor="#ff00aa" />
+                <stop offset="100%" stopColor="#ff6a64" />
               </linearGradient>
             </defs>
 
@@ -43,8 +43,8 @@ export function Icon({ name }) {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <defs>
               <linearGradient id="grad3" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#ff00aa" />
-                <stop offset="100%" stop-color="#ff6a64" />
+                <stop offset="0%" stopColor="#ff00aa" />
+                <stop offset="100%" stopColor="#ff6a64" />
               </linearGradient>
             </defs>
 
@@ -62,8 +62,8 @@ export function Icon({ name }) {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <defs>
               <linearGradient id="grad4" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#ff00aa" />
-                <stop offset="100%" stop-color="#ff6a64" />
+                <stop offset="0%" stopColor="#ff00aa" />
+                <stop offset="100%" stopColor="#ff6a64" />
               </linearGradient>
             </defs>
 
@@ -87,8 +87,8 @@ export function Icon({ name }) {
                 x2="0%"
                 y2="0%"
               >
-                <stop offset="0%" stop-color="#ff00aa" />
-                <stop offset="100%" stop-color="#ff6a64" />
+                <stop offset="0%" stopColor="#ff00aa" />
+                <stop offset="100%" stopColor="#ff6a64" />
               </linearGradient>
             </defs>
 

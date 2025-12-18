@@ -10,7 +10,7 @@ export function GeneralForm({ submit }) {
         <input type="tel" id="phone" name="phone" placeholder="Phone" />
         <label htmlFor="city">City</label>
         <input type="text" id="city" name="city" placeholder="City" />
-        <button>Save</button>
+        <button className="save">Save</button>
       </form>
     </>
   );

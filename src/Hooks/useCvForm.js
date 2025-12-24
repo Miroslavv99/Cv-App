@@ -12,6 +12,10 @@ export function useCvForm() {
     degree: "",
   });
 
+  const [professionlaInfo, setProfessionalInfo] = useState({
+    jobTitle: "",
+  });
+
   const [isOpen, setIsOpen] = useState({
     general: false,
     education: false,
@@ -34,6 +38,9 @@ export function useCvForm() {
       case "education":
         setVisibility((prev) => ({ ...prev, education: true }));
         break;
+      case "professional":
+        setVisibility((prev) => ({ ...prev, professional: true }));
+        break;
     }
   }
 
@@ -44,6 +51,9 @@ export function useCvForm() {
         break;
       case "education":
         setIsOpen((prev) => ({ ...prev, education: !prev.education }));
+        break;
+      case "professional":
+        setIsOpen((prev) => ({ ...prev, professional: !prev.professional }));
         break;
     }
   }
@@ -69,6 +79,15 @@ export function useCvForm() {
     }));
   }
 
+  function handleProfessionlaInfo(e) {
+    e.preventDefault();
+
+    setProfessionalInfo((prev) => ({
+      ...prev,
+      jobTitle: e.target.jobTitle.value,
+    }));
+  }
+
   function submitHandler(e, key) {
     switch (key) {
       case "general":
@@ -85,15 +104,21 @@ export function useCvForm() {
           toggleVisibility(key);
         }
         break;
+      case "professional": {
+        handleProfessionlaInfo(e);
+        toggleOpen("professional");
+        toggleVisibility(key);
+      }
     }
   }
 
   return {
     generalInfo,
+    educationInfo,
+    professionlaInfo,
     isOpen,
     editButtonVisible,
     toggleOpen,
     submitHandler,
-    educationInfo,
   };
 }

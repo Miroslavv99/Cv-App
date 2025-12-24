@@ -1,6 +1,7 @@
 import { Accordion } from "./Accordion";
 import { GeneralForm } from "./forms/GeneralForm";
 import { EducationForm } from "./forms/EducationForm";
+import { ProfessionalForm } from "./forms/ProfessionalForm";
 
 export function FormSection({
   isOpen,
@@ -26,6 +27,15 @@ export function FormSection({
     openKey: "education",
   };
 
+  const professionalProps = {
+    title: "Professional Experience",
+    image: "professional",
+    formIsOpen: isOpen.professional,
+    buttonVisible: editButtonVisible.professional,
+    setIsOpen: setIsOpen,
+    openKey: "professional",
+  };
+
   return (
     <>
       <section className="form-section">
@@ -35,7 +45,9 @@ export function FormSection({
         <Accordion {...educationProps}>
           <EducationForm submit={submitHandler} />
         </Accordion>
-        <Accordion title="Professional Experience" image={"expercience"} />
+        <Accordion {...professionalProps}>
+          <ProfessionalForm submit={submitHandler} />
+        </Accordion>
         <Accordion title="Computer Skills" image={"skills"} />
       </section>
     </>

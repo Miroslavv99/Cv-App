@@ -2,6 +2,7 @@ import { FormSection } from "./FormSection";
 import { CvPreview } from "./cv-sections/CvPreview";
 import { GeneralSection } from "./cv-sections/GeneralSection";
 import { EducationSection } from "./cv-sections/EducationSection";
+import { ProfessionalSection } from "./cv-sections/ProfessionalSection";
 import { useCvForm } from "../Hooks/useCvForm";
 
 export function MainSection() {
@@ -12,6 +13,7 @@ export function MainSection() {
     toggleOpen,
     submitHandler,
     educationInfo,
+    professionlaInfo,
   } = useCvForm();
 
   return (
@@ -26,6 +28,7 @@ export function MainSection() {
         <CvPreview>
           <GeneralSection name={generalInfo.name} email={generalInfo.email} />
           <EducationSection degree={educationInfo.degree} />
+          <ProfessionalSection jobTitle={professionlaInfo.jobTitle} />
         </CvPreview>
       </main>
     </>

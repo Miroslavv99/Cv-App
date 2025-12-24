@@ -9,7 +9,6 @@ export function Accordion({
   setIsOpen,
   openKey,
 }) {
-  console.log({ buttonVisible, formIsOpen });
   return (
     <>
       <div className="accordion">

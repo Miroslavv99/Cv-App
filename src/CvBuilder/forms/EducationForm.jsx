@@ -23,20 +23,15 @@ export function EducationForm({ submit }) {
           id="country"
           placeholder="Enter Country and City"
         />
-        <label htmlFor="start-date">Start Date</label>
+        <label htmlFor="startDate">Start Date</label>
         <input
           className="date-input"
           type="date"
-          name="start-date"
-          id="start-date"
+          name="startDate"
+          id="startDate"
         />
-        <label htmlFor="end-date">End Date</label>
-        <input
-          className="date-Input"
-          type="date"
-          name="end-date"
-          id="end-date"
-        />
+        <label htmlFor="endDate">End Date</label>
+        <input className="date-input" type="date" name="endDate" id="endDate" />
         <button className="save">Save</button>
       </form>
     </>

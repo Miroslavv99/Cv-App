@@ -10,6 +10,10 @@ export function useCvForm() {
 
   const [educationInfo, setEducationInfo] = useState({
     degree: "",
+    school: "",
+    country: "",
+    startDate: "",
+    endDate: "",
   });
 
   const [professionlaInfo, setProfessionalInfo] = useState({
@@ -76,6 +80,10 @@ export function useCvForm() {
     setEducationInfo((prev) => ({
       ...prev,
       degree: e.target.degree.value,
+      school: e.target.school.value,
+      country: e.target.country.value,
+      startDate: e.target.startDate.value,
+      endDate: e.target.endDate.value,
     }));
   }
 

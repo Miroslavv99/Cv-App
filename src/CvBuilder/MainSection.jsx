@@ -26,8 +26,19 @@ export function MainSection() {
           submitHandler={submitHandler}
         />
         <CvPreview>
-          <GeneralSection name={generalInfo.name} email={generalInfo.email} />
-          <EducationSection degree={educationInfo.degree} />
+          <GeneralSection
+            name={generalInfo.name}
+            email={generalInfo.email}
+            phone={generalInfo.phone}
+            city={generalInfo.city}
+          />
+          <EducationSection
+            degree={educationInfo.degree}
+            school={educationInfo.school}
+            country={educationInfo.country}
+            startDate={educationInfo.startDate}
+            endDate={educationInfo.endDate}
+          />
           <ProfessionalSection jobTitle={professionlaInfo.jobTitle} />
         </CvPreview>
       </main>

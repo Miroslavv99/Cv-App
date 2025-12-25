@@ -5,11 +5,23 @@ export function GeneralForm({ submit }) {
         <label htmlFor="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Name" required />
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
         <label htmlFor="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone" />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone"
+          required
+        />
         <label htmlFor="city">City</label>
-        <input type="text" id="city" name="city" placeholder="City" />
+        <input type="text" id="city" name="city" placeholder="City" required />
         <button className="save">Save</button>
       </form>
     </>

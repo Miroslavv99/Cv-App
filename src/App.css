@@ -169,10 +169,42 @@ input:focus {
   display: block;
 }
 
+.date-input {
+  width: 120px;
+  align-self: flex-start;
+  margin-left: 2.5%;
+  padding-right: 10px;
+}
+
 .cv-preview {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 10px rgba(66, 66, 66, 0.3);
   background-color: rgb(255, 255, 255);
   width: 45%;
   height: 95vh;
   margin-bottom: 10px;
+  padding: 3%;
+}
+
+.general-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.general-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.education-section {
+  border-top: 2px solid black;
+  display: flex;
 }

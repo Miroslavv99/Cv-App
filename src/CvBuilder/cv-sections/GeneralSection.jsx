@@ -1,8 +1,16 @@
-export function GeneralSection({ name, email }) {
+export function GeneralSection({ name, email, phone, city }) {
   return (
     <>
-      <h1>{name}</h1>
-      <h2>{email}</h2>
+      <div className="general-section">
+        <div className="general-header">
+          <h2>{name}</h2>
+        </div>
+        <div className="general-footer">
+          <p>{email}</p>
+          <p>{phone}</p>
+          <p>{city}</p>
+        </div>
+      </div>
     </>
   );
 }

@@ -30,6 +30,8 @@ export function ProfessionalForm({ submit }) {
           name="end-experience-date"
           id="end-experience-date"
         />
+        <label htmlFor="description">Description</label>
+        <textarea name="description" id="description"></textarea>
         <button className="save">Save</button>
       </form>
     </>

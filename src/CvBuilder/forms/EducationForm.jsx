@@ -32,6 +32,7 @@ export function EducationForm({ submit }) {
         />
         <label htmlFor="endDate">End Date</label>
         <input className="date-input" type="date" name="endDate" id="endDate" />
+
         <button className="save">Save</button>
       </form>
     </>

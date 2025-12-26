@@ -103,7 +103,8 @@ label {
   padding-left: 10px;
 }
 
-input {
+input,
+textarea {
   background-color: rgb(236, 236, 236);
   border-radius: 20px;
   border: none;
@@ -111,14 +112,20 @@ input {
   width: 95%;
   height: 5vh;
   margin-bottom: 10px;
+  outline: none;
   padding-left: 10px;
   transition: transform 0.1s ease;
+}
+
+textarea {
+  min-height: 12vh;
+  padding-top: 10px;
+  resize: none;
 }
 
 input:hover,
 input:focus {
   transform: scale(102%);
-  outline: none;
 }
 
 .open {
@@ -207,4 +214,5 @@ input:focus {
 .education-section {
   border-top: 2px solid black;
   display: flex;
+  flex-direction: column;
 }

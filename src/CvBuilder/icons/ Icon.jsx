@@ -18,87 +18,75 @@ export function Icon({ name }) {
           </svg>
         </>
       );
-    case "education": {
-      return (
-        <>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <defs>
-              <linearGradient id="grad2" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#ff00aa" />
-                <stop offset="100%" stopColor="#ff6a64" />
-              </linearGradient>
-            </defs>
+      break;
+    case "education":
+      {
+        return (
+          <>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stopColor="#ff00aa" />
+                  <stop offset="100%" stopColor="#ff6a64" />
+                </linearGradient>
+              </defs>
 
-            <path
-              fill="url(#grad2)"
-              d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
-            />
-          </svg>
-        </>
-      );
-    }
-    case "professional": {
-      return (
-        <>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <defs>
-              <linearGradient id="grad3" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#ff00aa" />
-                <stop offset="100%" stopColor="#ff6a64" />
-              </linearGradient>
-            </defs>
+              <path
+                fill="url(#grad2)"
+                d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
+              />
+            </svg>
+          </>
+        );
+      }
+      break;
+    case "professional":
+      {
+        return (
+          <>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="grad3" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stopColor="#ff00aa" />
+                  <stop offset="100%" stopColor="#ff6a64" />
+                </linearGradient>
+              </defs>
 
-            <path
-              fill="url(#grad3)"
-              d="M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z"
-            />
-          </svg>
-        </>
-      );
-    }
-    case "skills": {
-      return (
-        <>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <defs>
-              <linearGradient id="grad4" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#ff00aa" />
-                <stop offset="100%" stopColor="#ff6a64" />
-              </linearGradient>
-            </defs>
+              <path
+                fill="url(#grad3)"
+                d="M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z"
+              />
+            </svg>
+          </>
+        );
+      }
+      break;
+    case "chevron":
+      {
+        return (
+          <>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient
+                  id="arrowGradient"
+                  x1="100%"
+                  y1="0%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stopColor="#ff00aa" />
+                  <stop offset="100%" stopColor="#ff6a64" />
+                </linearGradient>
+              </defs>
 
-            <path
-              fill="url(#grad4)"
-              d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z"
-            />
-          </svg>
-        </>
-      );
-    }
-    case "chevron": {
-      return (
-        <>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <defs>
-              <linearGradient
-                id="arrowGradient"
-                x1="100%"
-                y1="0%"
-                x2="0%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="#ff00aa" />
-                <stop offset="100%" stopColor="#ff6a64" />
-              </linearGradient>
-            </defs>
-
-            <path
-              d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-              fill="url(#arrowGradient)"
-            />
-          </svg>
-        </>
-      );
-    }
+              <path
+                d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                fill="url(#arrowGradient)"
+              />
+            </svg>
+          </>
+        );
+      }
+      break;
   }
 }

@@ -9,11 +9,16 @@ export function EducationSection({
     <>
       <h3>Education</h3>
       <div className="education-section">
-        <h1>{degree}</h1>
-        <h1>{school}</h1>
-        <h1>{country}</h1>
-        <h2>{startDate}</h2>
-        <h2>{endDate}</h2>
+        <div className="school-info">
+          <h4>{degree},</h4>
+          <i>&nbsp;{school}</i>
+        </div>
+        <div className="education-info">
+          <p>{country}</p>
+          <div className="date-info"></div>
+          <i>Start Date: {startDate}</i>
+          <i>End Date: {endDate}</i>
+        </div>
       </div>
     </>
   );

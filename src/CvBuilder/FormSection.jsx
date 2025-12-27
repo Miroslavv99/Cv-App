@@ -48,7 +48,6 @@ export function FormSection({
         <Accordion {...professionalProps}>
           <ProfessionalForm submit={submitHandler} />
         </Accordion>
-        <Accordion title="Computer Skills" image={"skills"} />
       </section>
     </>
   );

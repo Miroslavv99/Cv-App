@@ -18,20 +18,22 @@ export function useCvForm() {
 
   const [professionlaInfo, setProfessionalInfo] = useState({
     jobTitle: "",
+    company: "",
+    experienceStartDate: "",
+    experienceEndDate: "",
+    description: "",
   });
 
   const [isOpen, setIsOpen] = useState({
     general: false,
     education: false,
     professional: false,
-    skills: false,
   });
 
   const [editButtonVisible, setVisibility] = useState({
     general: false,
     education: false,
     professional: false,
-    skills: false,
   });
 
   function toggleVisibility(key) {
@@ -93,6 +95,10 @@ export function useCvForm() {
     setProfessionalInfo((prev) => ({
       ...prev,
       jobTitle: e.target.jobTitle.value,
+      company: e.target.company.value,
+      experienceStartDate: e.target.experienceStartDate.value,
+      experienceEndDate: e.target.experienceEndDate.value,
+      description: e.target.description.value,
     }));
   }
 

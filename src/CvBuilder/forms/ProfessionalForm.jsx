@@ -16,19 +16,19 @@ export function ProfessionalForm({ submit }) {
           id="company"
           placeholder="Enter Company"
         />
-        <label htmlFor="start-experience-date">Start Date</label>
+        <label htmlFor="experienceStartDate">Start Date</label>
         <input
           className="date-input"
           type="date"
-          name="start-experience-date"
-          id="start-experience-date"
+          name="experienceStartDate"
+          id="experienceStartDate"
         />
-        <label htmlFor="end-experience-date">End Date</label>
+        <label htmlFor="experienceEndDate">End Date</label>
         <input
           className="date-input"
           type="date"
-          name="end-experience-date"
-          id="end-experience-date"
+          name="experienceEndDate"
+          id="experienceEndDate"
         />
         <label htmlFor="description">Description</label>
         <textarea name="description" id="description"></textarea>

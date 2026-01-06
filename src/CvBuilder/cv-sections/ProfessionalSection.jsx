@@ -6,12 +6,21 @@ export function ProfessionalSection({
   description,
 }) {
   return (
-    <div>
-      <p>{jobTitle}</p>
-      <p> {company}</p>
-      <p> {experienceStartDate}</p>
-      <p> {experienceEndDate}</p>
-      <p> {description}</p>
-    </div>
+    <>
+      <h3>Professional Expercience</h3>
+      <div className="professional-section">
+        <div className="job-info">
+          <div>
+            <h4>{jobTitle},</h4>
+            <i>&nbsp;{company}</i>
+          </div>
+          <p className="description"> {description}</p>
+        </div>
+        <div className="date-info">
+          <i>Start Date: {experienceStartDate}</i>
+          <i>End Date: {experienceEndDate}</i>
+        </div>
+      </div>
+    </>
   );
 }

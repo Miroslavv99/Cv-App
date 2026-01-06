@@ -15,7 +15,6 @@ export function EducationSection({
         </div>
         <div className="education-info">
           <p>{country}</p>
-          <div className="date-info"></div>
           <i>Start Date: {startDate}</i>
           <i>End Date: {endDate}</i>
         </div>

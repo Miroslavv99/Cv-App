@@ -41,13 +41,15 @@ export function MainSection() {
             />
           ) : null}
 
-          <ProfessionalSection
-            jobTitle={professionlaInfo.jobTitle}
-            company={professionlaInfo.company}
-            experienceStartDate={professionlaInfo.experienceStartDate}
-            experienceEndDate={professionlaInfo.experienceEndDate}
-            description={professionlaInfo.description}
-          />
+          {editButtonVisible.professional ? (
+            <ProfessionalSection
+              jobTitle={professionlaInfo.jobTitle}
+              company={professionlaInfo.company}
+              experienceStartDate={professionlaInfo.experienceStartDate}
+              experienceEndDate={professionlaInfo.experienceEndDate}
+              description={professionlaInfo.description}
+            />
+          ) : null}
         </CvPreview>
       </main>
     </>
